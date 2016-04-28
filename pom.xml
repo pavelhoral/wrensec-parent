@@ -156,7 +156,7 @@
         <checkstyleHeaderLocation>org/forgerock/checkstyle/default-java-header</checkstyleHeaderLocation>
         <checkstyleFailOnError>true</checkstyleFailOnError>
 
-        <!-- Thanks to the usage of properties, each project using this POM as parent-pom can easily use its own plugin version 
+        <!-- Thanks to the usage of properties, each project using this POM as parent-pom can easily use its own plugin version
              (useful when you have some constraints on a given version and if the parent doesn't give you the one you need ...) -->
 
         <!-- clirr-maven-plugin -->
@@ -220,7 +220,7 @@
         <netbeans.checkstyle.format>true</netbeans.checkstyle.format>
 
         <!--  ForgeRock build tools version -->
-        <forgerockBuildToolsVersion>1.0.3</forgerockBuildToolsVersion>
+        <forgerockBuildToolsVersion>1.0.4</forgerockBuildToolsVersion>
 
         <!-- Forgerock binary license name -->
         <binary.license.name>Forgerock_License.txt</binary.license.name>
@@ -778,7 +778,7 @@
                              to fail the build if source code does not comply with
                              our coding guidelines, and not at a later stage when
                              the site is generated (which may never occur for some
-                             projects).     
+                             projects).
                         -->
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-checkstyle-plugin</artifactId>
@@ -883,7 +883,7 @@
                     </plugin>
 
                     <!-- CheckStyle -->
-                    <plugin> 
+                    <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-checkstyle-plugin</artifactId>
                         <version>${checkstylePluginVersion}</version>
