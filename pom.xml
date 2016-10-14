@@ -148,6 +148,9 @@
         <pmdPluginVersion>3.4</pmdPluginVersion>
         <targetJdk>${maven.compiler.target}</targetJdk>
 
+        <!-- Checkstyle version -->
+        <checkstyleVersion>6.6</checkstyleVersion>
+
         <!-- maven-checkstyle-plugin -->
         <checkstylePluginVersion>2.16</checkstylePluginVersion>
         <checkstyleSourceConfigLocation>org/forgerock/checkstyle/check-src-default.xml</checkstyleSourceConfigLocation>
@@ -286,7 +289,7 @@
                         <dependency>
                             <groupId>com.puppycrawl.tools</groupId>
                             <artifactId>checkstyle</artifactId>
-                            <version>6.6</version>
+                            <version>${checkstyleVersion}</version>
                         </dependency>
                     </dependencies>
 
