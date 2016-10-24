@@ -1171,6 +1171,11 @@
        <profile>
           <!-- This profile gets the ForgeRock binary license -->
           <id>binary-licensing</id>
+          <activation>
+             <file>
+                <exists>include_forgerock_license</exists>
+             </file>
+          </activation>
           <repositories>
              <repository>
                 <id>forgerock-internal</id>
