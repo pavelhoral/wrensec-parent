@@ -181,7 +181,7 @@
         <mavenWarPluginVersion>2.6</mavenWarPluginVersion>
 
         <!-- maven-assembly-plugin http://maven.apache.org/plugins/maven-assembly-plugin/ -->
-        <mavenAssemblyPluginVersion>2.5.3</mavenAssemblyPluginVersion>
+        <mavenAssemblyPluginVersion>2.5.5</mavenAssemblyPluginVersion>
 
         <!-- maven-surefire-plugin http://maven.apache.org/surefire/maven-surefire-plugin/ -->
         <mavenSurefirePluginVersion>2.18.1</mavenSurefirePluginVersion>
