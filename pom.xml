@@ -484,7 +484,7 @@
                     </dependencies>
                     <configuration>
                         <!-- prevent the annoying ForkedBooter process from stealing window focus on Mac OS -->
-                        <argLine>-Djava.awt.headless=true</argLine>
+                        <argLine>@{argLine} -Djava.awt.headless=true</argLine>
                     </configuration>
                 </plugin>
                 <plugin>
