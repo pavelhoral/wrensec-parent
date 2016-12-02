@@ -231,6 +231,8 @@
         <forgerock.license.groupId>com.forgerock</forgerock.license.groupId>
         <forgerock.license.artifactId>binary-license</forgerock.license.artifactId>
         <forgerock.license.version>1.0.0</forgerock.license.version>
+        <!-- Keep this line until removal of @{argLine} in surefire plugin configuration -->
+        <argLine></argLine>
     </properties>
 
     <prerequisites>
