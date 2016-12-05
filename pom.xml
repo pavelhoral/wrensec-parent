@@ -231,8 +231,8 @@
         <forgerock.license.groupId>com.forgerock</forgerock.license.groupId>
         <forgerock.license.artifactId>binary-license</forgerock.license.artifactId>
         <forgerock.license.version>1.0.0</forgerock.license.version>
-        <!-- Keep this line until removal of @{argLine} in surefire plugin configuration -->
-        <argLine />
+        <!-- prevent the annoying ForkedBooter process from stealing window focus on Mac OS -->
+        <argLine>-Djava.awt.headless=true</argLine>
     </properties>
 
     <prerequisites>
@@ -484,10 +484,6 @@
                             <version>${forgerockBuildToolsVersion}</version>
                         </dependency>
                     </dependencies>
-                    <configuration>
-                        <!-- prevent the annoying ForkedBooter process from stealing window focus on Mac OS -->
-                        <argLine>@{argLine} -Djava.awt.headless=true</argLine>
-                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
