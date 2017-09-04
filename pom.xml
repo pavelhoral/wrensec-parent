@@ -1330,4 +1330,18 @@
         </plugins>
     </reporting>
 
+    <dependencyManagement>
+        <dependencies>
+            <!-- Ensure that the version specified for tools.jar matches the
+                 JDK version to retrieve the right GPG signature from the repo.
+              -->
+            <dependency>
+                <groupId>com.sun</groupId>
+                <artifactId>tools</artifactId>
+                <version>${java.version}</version>
+                <scope>system</scope>
+                <systemPath>${java.home}/../lib/tools.jar</systemPath>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
