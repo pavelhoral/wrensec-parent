@@ -238,6 +238,9 @@
         <!-- maven-release-plugin http://maven.apache.org/plugins/maven-release-plugin/ -->
         <mavenReleasePluginVersion>2.5.1</mavenReleasePluginVersion>
 
+        <!-- pgpverify-maven-plugin -->
+        <pgpVerifyPluginVersion>1.1.0</pgpVerifyPluginVersion>
+
         <!-- ***************** -->
         <!-- Repository Deployment URLs -->
         <!-- ***************** -->
@@ -627,7 +630,7 @@
                 <plugin>
                     <groupId>com.github.s4u.plugins</groupId>
                     <artifactId>pgpverify-maven-plugin</artifactId>
-                    <version>1.1.0</version>
+                    <version>${pgpVerifyPluginVersion}</version>
                 </plugin>
                 <plugin>
                     <!-- Check Open Source licenses for all the dependencies -->
