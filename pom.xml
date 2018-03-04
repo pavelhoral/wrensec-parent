@@ -2,7 +2,7 @@
 <!--
  DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
 
- Copyright 2011-2015 ForgeRock AS.
+ Copyright 2011-2016 ForgeRock AS.
  Portions Copyright 2017 Wren Security.
 
  The contents of this file are subject to the terms
@@ -28,7 +28,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.forgerock</groupId>
     <artifactId>forgerock-parent</artifactId>
-    <version>2.0.7</version>
+    <version>2.0.10</version>
     <packaging>pom</packaging>
     <name>Wren Security Parent</name>
     <description>Parent POM for Wren Security (formerly ForgeRock) projects. Provides default project build configuration.</description>
@@ -176,6 +176,9 @@
         <pmdPluginVersion>3.4</pmdPluginVersion>
         <targetJdk>${maven.compiler.target}</targetJdk>
 
+        <!-- Checkstyle version -->
+        <checkstyleVersion>6.6</checkstyleVersion>
+
         <!-- maven-checkstyle-plugin -->
         <checkstylePluginVersion>2.16</checkstylePluginVersion>
         <checkstyleSourceConfigLocation>org/forgerock/checkstyle/check-src-default.xml</checkstyleSourceConfigLocation>
@@ -239,7 +242,7 @@
         <mavenReleasePluginVersion>2.5.1</mavenReleasePluginVersion>
 
         <!-- pgpverify-maven-plugin -->
-        <pgpVerifyPluginVersion>1.1.0</pgpVerifyPluginVersion>
+        <pgpVerifyPluginVersion>1.2.0-wren1</pgpVerifyPluginVersion>
 
         <!-- ***************** -->
         <!-- Repository Deployment URLs -->
@@ -255,7 +258,11 @@
         <forgerockBuildToolsVersion>1.0.4</forgerockBuildToolsVersion>
 
         <!-- Forgerock binary license name -->
-        <binary.license.name>Forgerock_License.txt</binary.license.name>
+        <forgerock.license.name>Forgerock_License.txt</forgerock.license.name>
+        <forgerock.license.output.dir>${project.build.directory}/legal-notices</forgerock.license.output.dir>
+        <forgerock.license.groupId>com.forgerock</forgerock.license.groupId>
+        <forgerock.license.artifactId>binary-license</forgerock.license.artifactId>
+        <forgerock.license.version>1.0.0</forgerock.license.version>
     </properties>
 
     <prerequisites>
@@ -314,7 +321,7 @@
                         <dependency>
                             <groupId>com.puppycrawl.tools</groupId>
                             <artifactId>checkstyle</artifactId>
-                            <version>6.6</version>
+                            <version>${checkstyleVersion}</version>
                         </dependency>
                     </dependencies>
 
@@ -474,7 +481,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-shade-plugin</artifactId>
-                    <version>2.0</version>
+                    <version>2.4</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -838,20 +845,6 @@
                             </execution>
                         </executions>
                     </plugin>
-                    <plugin>
-                        <!-- Check Open Source licenses for all the dependencies -->
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>license-maven-plugin</artifactId>
-                        <version>1.7</version>
-                        <executions>
-                            <execution>
-                                <id>generate-oss-license-report</id>
-                                <goals>
-                                    <goal>add-third-party</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
                 </plugins>
             </build>
         </profile>
@@ -1181,6 +1174,7 @@
                         <configuration>
                             <failNoSignature>true</failNoSignature>
                             <keysMapLocation>http://wrensecurity.org/trustedkeys.properties</keysMapLocation>
+                            <verifySnapshots>true</verifySnapshots>
                         </configuration>
                         <executions>
                             <execution>
@@ -1249,71 +1243,44 @@
           </reporting>
         </profile>
        <profile>
-          <!-- This profile gets the license from SVN if the URL is set -->
-          <id>get-binary-license</id>
-          <activation>
-             <property>
-                <name>binary.license.url</name>
-             </property>
-          </activation>
+          <!-- This profile gets the ForgeRock binary license -->
+          <id>binary-licensing</id>
+          <repositories>
+             <repository>
+                <id>forgerock-internal</id>
+                <name>Forgerock Internal Repository</name>
+                <url>http://maven.forgerock.org/repo/internal</url>
+             </repository>
+          </repositories>
           <build>
              <plugins>
                 <plugin>
                    <groupId>org.apache.maven.plugins</groupId>
-                   <artifactId>maven-antrun-plugin</artifactId>
+                   <artifactId>maven-dependency-plugin</artifactId>
                    <executions>
                       <execution>
-                         <id>get-license-from-svn</id>
+                         <id>Copy license</id>
+                         <phase>validate</phase>
                          <goals>
-                            <goal>run</goal>
+                            <goal>copy</goal>
                          </goals>
-                         <phase>prepare-package</phase>
                          <configuration>
-                            <target>
-                               <taskdef resource="net/sf/antcontrib/antcontrib.properties" classpathref="maven.plugin.classpath" />
-                               <if>
-                                  <!-- To include the license in the binary, the project must set another property (include.binary.license) -->
-                                  <!-- This property contains the target folder to export the binary license -->
-                                  <isset property="include.binary.license" />
-                                  <then>
-                                     <echo message="Fetching license from SVN" />
-                                     <!-- The Maven SCM plugin clean the target folder when using the export command (it's a bug...) -->
-                                     <!-- That's why we are using the svn export command -->
-                                     <mkdir dir="${include.binary.license}" />
-                                     <exec dir="${include.binary.license}" executable="svn">
-                                        <arg value="export" />
-                                        <arg value="${binary.license.url}" />
-                                        <arg value="${include.binary.license}/${binary.license.name}" />
-                                     </exec>
-                                  </then>
-                                  <else>
-                                     <echo message="License not fetched from SVN for this project" />
-                                  </else>
-                               </if>
-                            </target>
+                            <artifactItems>
+                               <artifactItem>
+                                  <groupId>${forgerock.license.groupId}</groupId>
+                                  <artifactId>${forgerock.license.artifactId}</artifactId>
+                                  <version>${forgerock.license.version}</version>
+                                  <type>txt</type>
+                                  <overWrite>true</overWrite>
+                                  <outputDirectory>${forgerock.license.output.dir}</outputDirectory>
+                                  <destFileName>${forgerock.license.name}</destFileName>
+                               </artifactItem>
+                            </artifactItems>
                          </configuration>
                       </execution>
-                   </executions>
-                   <dependencies>
-                      <dependency>
-                         <groupId>ant-contrib</groupId>
-                         <artifactId>ant-contrib</artifactId>
-                         <version>1.0b3</version>
-                         <exclusions>
-                            <exclusion>
-                               <groupId>ant</groupId>
-                               <artifactId>ant</artifactId>
-                            </exclusion>
-                         </exclusions>
-                      </dependency>
-                      <dependency>
-                         <groupId>org.apache.ant</groupId>
-                         <artifactId>ant-nodeps</artifactId>
-                         <version>1.8.1</version>
-                      </dependency>
-                   </dependencies>
-                </plugin>
-             </plugins>
+                    </executions>
+                 </plugin>
+              </plugins>
           </build>
        </profile>
     </profiles>
@@ -1344,9 +1311,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <!-- Ensure that the version specified for tools.jar matches the
-                 JDK version to retrieve the right GPG signature from the repo.
-              -->
             <dependency>
                 <groupId>com.sun</groupId>
                 <artifactId>tools</artifactId>
