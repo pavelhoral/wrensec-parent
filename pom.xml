@@ -255,13 +255,6 @@
         <netbeans.checkstyle.format>true</netbeans.checkstyle.format>
 
         <wrenBuildToolsVersion>1.0.4</wrenBuildToolsVersion>
-
-        <!-- Forgerock binary license name -->
-        <forgerock.license.name>Forgerock_License.txt</forgerock.license.name>
-        <forgerock.license.output.dir>${project.build.directory}/legal-notices</forgerock.license.output.dir>
-        <forgerock.license.groupId>com.forgerock</forgerock.license.groupId>
-        <forgerock.license.artifactId>binary-license</forgerock.license.artifactId>
-        <forgerock.license.version>1.0.0</forgerock.license.version>
     </properties>
 
     <prerequisites>
@@ -1241,47 +1234,6 @@
             </plugins>
           </reporting>
         </profile>
-       <profile>
-          <!-- This profile gets the ForgeRock binary license -->
-          <id>binary-licensing</id>
-          <repositories>
-             <repository>
-                <id>forgerock-internal</id>
-                <name>Forgerock Internal Repository</name>
-                <url>http://maven.forgerock.org/repo/internal</url>
-             </repository>
-          </repositories>
-          <build>
-             <plugins>
-                <plugin>
-                   <groupId>org.apache.maven.plugins</groupId>
-                   <artifactId>maven-dependency-plugin</artifactId>
-                   <executions>
-                      <execution>
-                         <id>Copy license</id>
-                         <phase>validate</phase>
-                         <goals>
-                            <goal>copy</goal>
-                         </goals>
-                         <configuration>
-                            <artifactItems>
-                               <artifactItem>
-                                  <groupId>${forgerock.license.groupId}</groupId>
-                                  <artifactId>${forgerock.license.artifactId}</artifactId>
-                                  <version>${forgerock.license.version}</version>
-                                  <type>txt</type>
-                                  <overWrite>true</overWrite>
-                                  <outputDirectory>${forgerock.license.output.dir}</outputDirectory>
-                                  <destFileName>${forgerock.license.name}</destFileName>
-                               </artifactItem>
-                            </artifactItems>
-                         </configuration>
-                      </execution>
-                    </executions>
-                 </plugin>
-              </plugins>
-          </build>
-       </profile>
     </profiles>
 
     <reporting>
