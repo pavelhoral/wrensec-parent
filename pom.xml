@@ -242,7 +242,7 @@
         <mavenReleasePluginVersion>2.5.1</mavenReleasePluginVersion>
 
         <!-- pgpverify-maven-plugin -->
-        <pgpVerifyPluginVersion>1.3.0-wren1</pgpVerifyPluginVersion>
+        <pgpVerifyPluginVersion>1.3.0-wren2</pgpVerifyPluginVersion>
         <pgpVerifyWhitelist>http://wrensecurity.org/trustedkeys.properties</pgpVerifyWhitelist>
 
         <!-- ***************** -->
