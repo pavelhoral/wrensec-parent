@@ -1319,7 +1319,7 @@
 
             <activation>
                 <property>
-                    <name>!ignore-artifact-sigs</name>
+                    <name>!ignoreArtifactSigs</name>
                 </property>
             </activation>
 
