@@ -58,13 +58,13 @@
         <snapshotRepository>
             <id>wrensecurity-snapshots</id>
             <name>Wren Security Snapshot Repository</name>
-            <url>${forgerockDistMgmtSnapshotsUrl}</url>
+            <url>${wrenDistMgmtSnapshotsUrl}</url>
         </snapshotRepository>
 
         <repository>
             <id>wrensecurity-releases</id>
             <name>Wren Security Release Repository</name>
-            <url>${forgerockDistMgmtReleasesUrl}</url>
+            <url>${wrenDistMgmtReleasesUrl}</url>
         </repository>
     </distributionManagement>
 
@@ -73,7 +73,7 @@
         <repository>
             <id>wrensecurity-releases</id>
             <name>Wren Security Release Repository</name>
-            <url>${forgerockDistMgmtReleasesUrl}</url>
+            <url>${wrenDistMgmtReleasesUrl}</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
@@ -86,7 +86,7 @@
         <repository>
             <id>wrensecurity-snapshots</id>
             <name>Wren Security Snapshot Repository</name>
-            <url>${forgerockDistMgmtSnapshotsUrl}</url>
+            <url>${wrenDistMgmtSnapshotsUrl}</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -114,7 +114,7 @@
         <pluginRepository>
             <id>wrensecurity-releases</id>
             <name>Wren Security Plugin Release Repository</name>
-            <url>${forgerockDistMgmtReleasesUrl}</url>
+            <url>${wrenDistMgmtReleasesUrl}</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
@@ -123,7 +123,7 @@
         <pluginRepository>
             <id>wrensecurity-snapshots</id>
             <name>Wren Security Plugin Snapshot Repository</name>
-            <url>${forgerockDistMgmtSnapshotsUrl}</url>
+            <url>${wrenDistMgmtSnapshotsUrl}</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -247,15 +247,14 @@
         <!-- ***************** -->
         <!-- Repository Deployment URLs -->
         <!-- ***************** -->
-        <forgerockDistMgmtSnapshotsUrl>https://wrensecurity.jfrog.io/wrensecurity/snapshots</forgerockDistMgmtSnapshotsUrl>
-        <forgerockDistMgmtReleasesUrl>https://wrensecurity.jfrog.io/wrensecurity/releases</forgerockDistMgmtReleasesUrl>
+        <wrenDistMgmtSnapshotsUrl>https://wrensecurity.jfrog.io/wrensecurity/snapshots</wrenDistMgmtSnapshotsUrl>
+        <wrenDistMgmtReleasesUrl>https://wrensecurity.jfrog.io/wrensecurity/releases</wrenDistMgmtReleasesUrl>
         <forgerockVerifiedArchiveUrl>http://dl.bintray.com/wrensecurity/forgerock-archive</forgerockVerifiedArchiveUrl>
 
         <!-- this property makes sure NetBeans 6.8+ picks up some formatting rules from checkstyle -->
         <netbeans.checkstyle.format>true</netbeans.checkstyle.format>
 
-        <!--  ForgeRock build tools version -->
-        <forgerockBuildToolsVersion>1.0.4</forgerockBuildToolsVersion>
+        <wrenBuildToolsVersion>1.0.4</wrenBuildToolsVersion>
 
         <!-- Forgerock binary license name -->
         <forgerock.license.name>Forgerock_License.txt</forgerock.license.name>
@@ -316,7 +315,7 @@
                         <dependency>
                             <groupId>org.forgerock</groupId>
                             <artifactId>forgerock-build-tools</artifactId>
-                            <version>${forgerockBuildToolsVersion}</version>
+                            <version>${wrenBuildToolsVersion}</version>
                         </dependency>
                         <dependency>
                             <groupId>com.puppycrawl.tools</groupId>
@@ -405,7 +404,7 @@
                         <dependency>
                             <groupId>org.forgerock</groupId>
                             <artifactId>forgerock-build-tools</artifactId>
-                            <version>${forgerockBuildToolsVersion}</version>
+                            <version>${wrenBuildToolsVersion}</version>
                         </dependency>
                     </dependencies>
                     <configuration>
@@ -511,7 +510,7 @@
                         <dependency>
                             <groupId>org.forgerock</groupId>
                             <artifactId>forgerock-build-tools</artifactId>
-                            <version>${forgerockBuildToolsVersion}</version>
+                            <version>${wrenBuildToolsVersion}</version>
                         </dependency>
                     </dependencies>
                     <configuration>
