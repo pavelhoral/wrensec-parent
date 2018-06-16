@@ -164,19 +164,19 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <!-- maven-compiler-plugin http://maven.apache.org/plugins/maven-compiler-plugin -->
-        <mavenCompilerPluginVersion>3.3</mavenCompilerPluginVersion>
+        <mavenCompilerPluginVersion>3.7.0</mavenCompilerPluginVersion>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
 
         <!-- maven-enforcer-plugin -->
-        <maven.min.version>3.0.1</maven.min.version>
+        <maven.min.version>3.2.1</maven.min.version>
         <jdk.min.version>${maven.compiler.source}</jdk.min.version>
 
         <!-- findbugs-maven-plugin -->
-        <findbugsPluginVersion>3.0.1</findbugsPluginVersion>
+        <findbugsPluginVersion>3.0.5</findbugsPluginVersion>
 
         <!-- maven-javadoc-plugin -->
-        <javadocPluginVersion>2.9</javadocPluginVersion>
+        <javadocPluginVersion>3.0.1</javadocPluginVersion>
         <!-- forgerock-build-tools stylesheet org/forgerock/javadoc/javadoc.css
              does not work with JDK7 -->
         <javadocStylesheet />
@@ -188,14 +188,14 @@
         <downloadJavadocs>true</downloadJavadocs>
 
         <!-- maven-pmd-plugin -->
-        <pmdPluginVersion>3.4</pmdPluginVersion>
+        <pmdPluginVersion>3.10.0</pmdPluginVersion>
         <targetJdk>${maven.compiler.target}</targetJdk>
 
         <!-- Checkstyle version -->
-        <checkstyleVersion>6.6</checkstyleVersion>
+        <checkstyleVersion>8.10.1</checkstyleVersion>
 
         <!-- maven-checkstyle-plugin -->
-        <checkstylePluginVersion>2.16</checkstylePluginVersion>
+        <checkstylePluginVersion>3.0.0</checkstylePluginVersion>
         <checkstyleSourceConfigLocation>org/forgerock/checkstyle/check-src-default.xml</checkstyleSourceConfigLocation>
         <checkstyleDocTargetConfigLocation>org/forgerock/checkstyle/check-src-doc-target.xml</checkstyleDocTargetConfigLocation>
         <checkstyleUnitTestSuppressionsLocation>org/forgerock/checkstyle/unit-test-suppressions.xml</checkstyleUnitTestSuppressionsLocation>
@@ -206,34 +206,34 @@
              (useful when you have some constraints on a given version and if the parent doesn't give you the one you need ...) -->
 
         <!-- clirr-maven-plugin -->
-        <clirrPluginVersion>2.6.1</clirrPluginVersion>
+        <clirrPluginVersion>2.8</clirrPluginVersion>
 
         <!-- cobertura-maven-plugin http://mojo.codehaus.org/cobertura-maven-plugin -->
         <coberturaPluginVersion>2.7</coberturaPluginVersion>
 
         <!-- maven-dependency-plugin -->
-        <mavenDependencyPluginVersion>2.10</mavenDependencyPluginVersion>
+        <mavenDependencyPluginVersion>3.1.1</mavenDependencyPluginVersion>
 
         <!-- maven-clean-plugin http://maven.apache.org/components/plugins/maven-clean-plugin -->
-        <mavenCleanPluginVersion>2.6.1</mavenCleanPluginVersion>
+        <mavenCleanPluginVersion>3.1.0</mavenCleanPluginVersion>
 
         <!-- maven-jar-plugin http://maven.apache.org/plugins/maven-jar-plugin/ -->
-        <mavenJarPluginVersion>2.6</mavenJarPluginVersion>
+        <mavenJarPluginVersion>3.1.0</mavenJarPluginVersion>
 
         <!-- maven-war-plugin http://maven.apache.org/plugins/maven-war-plugin/ -->
-        <mavenWarPluginVersion>2.6</mavenWarPluginVersion>
+        <mavenWarPluginVersion>3.2.2</mavenWarPluginVersion>
 
         <!-- maven-assembly-plugin http://maven.apache.org/plugins/maven-assembly-plugin/ -->
-        <mavenAssemblyPluginVersion>2.5.3</mavenAssemblyPluginVersion>
+        <mavenAssemblyPluginVersion>3.1.0</mavenAssemblyPluginVersion>
 
         <!-- maven-surefire-plugin http://maven.apache.org/surefire/maven-surefire-plugin/ -->
-        <mavenSurefirePluginVersion>2.18.1</mavenSurefirePluginVersion>
+        <mavenSurefirePluginVersion>2.22.0</mavenSurefirePluginVersion>
 
         <!-- maven-source-plugin http://maven.apache.org/plugins/maven-source-plugin/ -->
-        <mavenSourcePluginVersion>2.4</mavenSourcePluginVersion>
+        <mavenSourcePluginVersion>3.0.1</mavenSourcePluginVersion>
 
         <!-- maven-resources-plugin http://maven.apache.org/plugins/maven-resources-plugin/ -->
-        <mavenResourcesPluginVersion>2.7</mavenResourcesPluginVersion>
+        <mavenResourcesPluginVersion>3.1.0</mavenResourcesPluginVersion>
 
         <!-- maven-remote-resources-plugin http://maven.apache.org/plugins/maven-remote-resources-plugin/ -->
         <mavenRemoteResourcesPluginVersion>1.5</mavenRemoteResourcesPluginVersion>
@@ -245,16 +245,16 @@
         <mavenInstallPluginVersion>2.5.2</mavenInstallPluginVersion>
 
         <!-- maven-scm-plugin http://maven.apache.org/plugins/maven-scm-plugin/ -->
-        <mavenSCMPluginVersion>1.9.4</mavenSCMPluginVersion>
+        <mavenSCMPluginVersion>1.10.0</mavenSCMPluginVersion>
 
         <!-- license-maven-plugin http://mojo.codehaus.org/license-maven-plugin/ -->
-        <licenseMavenPluginVersion>1.8</licenseMavenPluginVersion>
+        <licenseMavenPluginVersion>1.16</licenseMavenPluginVersion>
 
         <!-- maven-enforcer-plugin http://maven.apache.org/plugins/maven-enforcer-plugin/ -->
-        <mavenEnforcerPluginVersion>1.4</mavenEnforcerPluginVersion>
+        <mavenEnforcerPluginVersion>3.0.0-M2</mavenEnforcerPluginVersion>
 
         <!-- maven-release-plugin http://maven.apache.org/plugins/maven-release-plugin/ -->
-        <mavenReleasePluginVersion>2.5.1</mavenReleasePluginVersion>
+        <mavenReleasePluginVersion>2.5.3</mavenReleasePluginVersion>
 
         <!-- pgpverify-maven-plugin -->
         <pgpVerifyPluginVersion>1.2.0-wren1</pgpVerifyPluginVersion>
@@ -299,7 +299,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-antrun-plugin</artifactId>
-                    <version>1.7</version>
+                    <version>1.8</version>
                 </plugin>
 
                 <plugin>
@@ -311,7 +311,7 @@
                 <plugin>
                     <groupId>org.apache.felix</groupId>
                     <artifactId>maven-bundle-plugin</artifactId>
-                    <version>2.3.7</version>
+                    <version>3.5.0</version>
 
                     <configuration>
                         <instructions>
@@ -377,13 +377,13 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-docck-plugin</artifactId>
-                    <version>1.0</version>
+                    <version>1.1</version>
                 </plugin>
 
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-eclipse-plugin</artifactId>
-                    <version>2.9</version>
+                    <version>2.10</version>
                 </plugin>
 
                 <plugin>
@@ -395,7 +395,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-gpg-plugin</artifactId>
-                    <version>1.4</version>
+                    <version>1.6</version>
                 </plugin>
 
                 <plugin>
@@ -407,7 +407,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-invoker-plugin</artifactId>
-                    <version>1.7</version>
+                    <version>3.1.0</version>
                 </plugin>
 
                 <plugin>
@@ -419,7 +419,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jarsigner-plugin</artifactId>
-                    <version>1.2</version>
+                    <version>1.4</version>
                 </plugin>
 
                 <plugin>
@@ -455,7 +455,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-plugin-plugin</artifactId>
-                    <version>3.2</version>
+                    <version>3.5.2</version>
                 </plugin>
 
                 <plugin>
@@ -467,7 +467,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-project-info-reports-plugin</artifactId>
-                    <version>2.6</version>
+                    <version>2.9</version>
                 </plugin>
 
                 <plugin>
@@ -480,7 +480,7 @@
                         <dependency>
                             <groupId>org.apache.maven.scm</groupId>
                             <artifactId>maven-scm-provider-gitexe</artifactId>
-                            <version>1.8.1</version>
+                            <version>1.10.0</version>
                         </dependency>
                     </dependencies>
 
@@ -523,13 +523,13 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-shade-plugin</artifactId>
-                    <version>2.4</version>
+                    <version>3.1.1</version>
                 </plugin>
 
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
-                    <version>3.3</version>
+                    <version>3.7.1</version>
 
                     <configuration>
                         <outputEncoding>${project.build.sourceEncoding}</outputEncoding>
@@ -539,7 +539,7 @@
                         <dependency>
                             <groupId>org.apache.maven.wagon</groupId>
                             <artifactId>wagon-ssh</artifactId>
-                            <version>2.2</version>
+                            <version>3.1.0</version>
                         </dependency>
                     </dependencies>
                 </plugin>
@@ -572,13 +572,13 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>2.12.4</version>
+                    <version>2.22.0</version>
                 </plugin>
 
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-war-plugin</artifactId>
-                    <version>2.6</version>
+                    <version>${mavenWarPluginVersion}</version>
                 </plugin>
 
                 <plugin>
