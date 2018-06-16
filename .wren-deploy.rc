@@ -1,3 +1,2 @@
 export BINTRAY_PACKAGE="wrensec-parent"
-export JFROG_PACKAGE="org/forgerock/forgerock-parent/"
-export MAVEN_PACKAGE="forgerock-parent"
+export MVN_COMPILE_ARGS="${WREN_DEFAULT_MVN_COMPILE_ARGS:-} -Pfull-release"

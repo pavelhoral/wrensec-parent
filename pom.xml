@@ -487,7 +487,7 @@
                     <configuration>
                         <autoVersionSubmodules>true</autoVersionSubmodules>
                         <mavenExecutorId>forked-path</mavenExecutorId>
-                        <releaseProfiles>enforce,forgerock-release</releaseProfiles>
+                        <releaseProfiles>enforce,full-release</releaseProfiles>
                         <suppressCommitBeforeTag>false</suppressCommitBeforeTag>
                         <goals>deploy</goals>
                         <tagNameFormat>@{project.version}</tagNameFormat>
@@ -1084,7 +1084,7 @@
         </profile>
 
         <profile>
-            <id>forgerock-release</id>
+            <id>full-release</id>
 
             <build>
                 <plugins>
@@ -1098,7 +1098,7 @@
                         </configuration>
                     </plugin>
 
-                    <!-- Publish also javasources when releasing - required -->
+                    <!-- Publish source JARs when releasing -->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
@@ -1114,7 +1114,7 @@
                         </executions>
                     </plugin>
 
-                    <!-- Publish also javadocs when releasing - required -->
+                    <!-- Publish Javadoc archives when releasing -->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
