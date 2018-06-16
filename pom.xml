@@ -1210,7 +1210,7 @@
 
             <activation>
                 <property>
-                    <name>env.JOB_NAME</name>
+                    <name>env.SCM_REVISION</name>
                 </property>
             </activation>
 
