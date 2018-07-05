@@ -243,7 +243,8 @@
 
         <!-- pgpverify-maven-plugin -->
         <pgpVerifyPluginVersion>1.3.0-wren2</pgpVerifyPluginVersion>
-        <pgpVerifyWhitelist>https://wrensecurity.org/trustedkeys.properties</pgpVerifyWhitelist>
+        <pgpVerifyWhitelist>${project.build.directory}/trustedkeys.properties</pgpVerifyWhitelist>
+        <pgpWhitelistArtifact>org.wrensecurity:wrensec-pgp-whitelist:1.0.0</pgpWhitelistArtifact>
 
         <!-- ***************** -->
         <!-- Repository Deployment URLs -->
@@ -1169,6 +1170,27 @@
             </activation>
             <build>
                 <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-remote-resources-plugin</artifactId>
+
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>process</goal>
+                                </goals>
+
+                                <configuration>
+                                    <resourceBundles>
+                                        <resourceBundle>${pgpWhitelistArtifact}</resourceBundle>
+                                    </resourceBundles>
+
+                                    <outputDirectory>${project.build.directory}</outputDirectory>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+
                     <plugin>
                         <groupId>org.simplify4u.plugins</groupId>
                         <artifactId>pgpverify-maven-plugin</artifactId>
