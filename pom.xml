@@ -209,7 +209,7 @@
         <mavenWarPluginVersion>2.6</mavenWarPluginVersion>
 
         <!-- maven-assembly-plugin http://maven.apache.org/plugins/maven-assembly-plugin/ -->
-        <mavenAssemblyPluginVersion>2.5.3</mavenAssemblyPluginVersion>
+        <mavenAssemblyPluginVersion>2.5.5</mavenAssemblyPluginVersion>
 
         <!-- maven-surefire-plugin http://maven.apache.org/surefire/maven-surefire-plugin/ -->
         <mavenSurefirePluginVersion>2.18.1</mavenSurefirePluginVersion>
@@ -266,6 +266,8 @@
         <forgerock.license.groupId>com.forgerock</forgerock.license.groupId>
         <forgerock.license.artifactId>binary-license</forgerock.license.artifactId>
         <forgerock.license.version>1.0.0</forgerock.license.version>
+        <!-- prevent the annoying ForkedBooter process from stealing window focus on Mac OS -->
+        <argLine>-Djava.awt.headless=true</argLine>
     </properties>
 
     <prerequisites>
@@ -1269,6 +1271,11 @@
        <profile>
           <!-- This profile gets the ForgeRock binary license -->
           <id>binary-licensing</id>
+          <activation>
+             <file>
+                <exists>include_forgerock_license</exists>
+             </file>
+          </activation>
           <repositories>
              <repository>
                 <id>forgerock-internal</id>
