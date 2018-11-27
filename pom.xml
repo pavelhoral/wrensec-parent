@@ -164,7 +164,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <!-- maven-compiler-plugin http://maven.apache.org/plugins/maven-compiler-plugin -->
-        <mavenCompilerPluginVersion>3.7.0</mavenCompilerPluginVersion>
+        <mavenCompilerPluginVersion>3.8.0</mavenCompilerPluginVersion>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
 
@@ -188,11 +188,11 @@
         <downloadJavadocs>true</downloadJavadocs>
 
         <!-- maven-pmd-plugin -->
-        <pmdPluginVersion>3.10.0</pmdPluginVersion>
+        <pmdPluginVersion>3.11.0</pmdPluginVersion>
         <targetJdk>${maven.compiler.target}</targetJdk>
 
         <!-- Checkstyle version -->
-        <checkstyleVersion>8.10.1</checkstyleVersion>
+        <checkstyleVersion>8.14</checkstyleVersion>
 
         <!-- maven-checkstyle-plugin -->
         <checkstylePluginVersion>3.0.0</checkstylePluginVersion>
@@ -227,7 +227,7 @@
         <mavenAssemblyPluginVersion>3.1.0</mavenAssemblyPluginVersion>
 
         <!-- maven-surefire-plugin http://maven.apache.org/surefire/maven-surefire-plugin/ -->
-        <mavenSurefirePluginVersion>2.22.0</mavenSurefirePluginVersion>
+        <mavenSurefirePluginVersion>3.0.0-M1</mavenSurefirePluginVersion>
 
         <!-- maven-source-plugin http://maven.apache.org/plugins/maven-source-plugin/ -->
         <mavenSourcePluginVersion>3.0.1</mavenSourcePluginVersion>
@@ -236,16 +236,16 @@
         <mavenResourcesPluginVersion>3.1.0</mavenResourcesPluginVersion>
 
         <!-- maven-remote-resources-plugin http://maven.apache.org/plugins/maven-remote-resources-plugin/ -->
-        <mavenRemoteResourcesPluginVersion>1.5</mavenRemoteResourcesPluginVersion>
+        <mavenRemoteResourcesPluginVersion>1.6.0</mavenRemoteResourcesPluginVersion>
 
         <!-- maven-deploy-plugin http://maven.apache.org/plugins/maven-deploy-plugin/ -->
-        <mavenDeployPluginVersion>2.8.2</mavenDeployPluginVersion>
+        <mavenDeployPluginVersion>3.0.0-M1</mavenDeployPluginVersion>
 
         <!-- maven-install-plugin http://maven.apache.org/plugins/maven-install-plugin/ -->
-        <mavenInstallPluginVersion>2.5.2</mavenInstallPluginVersion>
+        <mavenInstallPluginVersion>3.0.0-M1</mavenInstallPluginVersion>
 
         <!-- maven-scm-plugin http://maven.apache.org/plugins/maven-scm-plugin/ -->
-        <mavenSCMPluginVersion>1.10.0</mavenSCMPluginVersion>
+        <mavenSCMPluginVersion>1.11.1</mavenSCMPluginVersion>
 
         <!-- license-maven-plugin http://mojo.codehaus.org/license-maven-plugin/ -->
         <licenseMavenPluginVersion>1.16</licenseMavenPluginVersion>
