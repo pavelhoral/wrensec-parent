@@ -259,7 +259,7 @@
         <pgpVerifyPluginVersion>1.3.0-wren3</pgpVerifyPluginVersion>
         <pgpVerifyResourcesDir>${project.build.directory}/wrensec-pgp-whitelist</pgpVerifyResourcesDir>
         <pgpVerifyWhitelist>${pgpVerifyResourcesDir}/trustedkeys.properties</pgpVerifyWhitelist>
-        <pgpWhitelistArtifact>org.wrensecurity:wrensec-pgp-whitelist:1.0.0</pgpWhitelistArtifact>
+        <pgpWhitelistArtifact>org.wrensecurity:wrensec-pgp-whitelist:1.4.3</pgpWhitelistArtifact>
 
         <!-- ***************** -->
         <!-- Repository Deployment URLs -->
