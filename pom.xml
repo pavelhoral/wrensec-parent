@@ -163,12 +163,12 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <!-- maven-compiler-plugin http://maven.apache.org/plugins/maven-compiler-plugin -->
-        <mavenCompilerPluginVersion>3.8.0</mavenCompilerPluginVersion>
+        <mavenCompilerPluginVersion>3.8.1</mavenCompilerPluginVersion>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
 
         <!-- maven-enforcer-plugin -->
-        <maven.min.version>3.5.0</maven.min.version>
+        <maven.min.version>3.6.0</maven.min.version>
         <jdk.min.version>${maven.compiler.source}</jdk.min.version>
 
         <!-- findbugs-maven-plugin -->
@@ -187,14 +187,14 @@
         <downloadJavadocs>true</downloadJavadocs>
 
         <!-- maven-pmd-plugin -->
-        <pmdPluginVersion>3.11.0</pmdPluginVersion>
+        <pmdPluginVersion>3.14.0</pmdPluginVersion>
         <targetJdk>${maven.compiler.target}</targetJdk>
 
         <!-- Checkstyle version -->
         <checkstyleVersion>8.14</checkstyleVersion>
 
         <!-- maven-checkstyle-plugin -->
-        <checkstylePluginVersion>3.0.0</checkstylePluginVersion>
+        <checkstylePluginVersion>3.1.2</checkstylePluginVersion>
         <checkstyleSourceConfigLocation>org/forgerock/checkstyle/check-src-default.xml</checkstyleSourceConfigLocation>
         <checkstyleDocTargetConfigLocation>org/forgerock/checkstyle/check-src-doc-target.xml</checkstyleDocTargetConfigLocation>
         <checkstyleUnitTestSuppressionsLocation>org/forgerock/checkstyle/unit-test-suppressions.xml</checkstyleUnitTestSuppressionsLocation>
@@ -211,31 +211,31 @@
         <coberturaPluginVersion>2.7</coberturaPluginVersion>
 
         <!-- maven-dependency-plugin -->
-        <mavenDependencyPluginVersion>3.1.1</mavenDependencyPluginVersion>
+        <mavenDependencyPluginVersion>3.1.2</mavenDependencyPluginVersion>
 
         <!-- maven-clean-plugin http://maven.apache.org/components/plugins/maven-clean-plugin -->
         <mavenCleanPluginVersion>3.1.0</mavenCleanPluginVersion>
 
         <!-- maven-jar-plugin http://maven.apache.org/plugins/maven-jar-plugin/ -->
-        <mavenJarPluginVersion>3.1.0</mavenJarPluginVersion>
+        <mavenJarPluginVersion>3.2.0</mavenJarPluginVersion>
 
         <!-- maven-war-plugin http://maven.apache.org/plugins/maven-war-plugin/ -->
-        <mavenWarPluginVersion>3.2.2</mavenWarPluginVersion>
+        <mavenWarPluginVersion>3.3.1</mavenWarPluginVersion>
 
         <!-- maven-assembly-plugin http://maven.apache.org/plugins/maven-assembly-plugin/ -->
-        <mavenAssemblyPluginVersion>3.1.0</mavenAssemblyPluginVersion>
+        <mavenAssemblyPluginVersion>3.3.0</mavenAssemblyPluginVersion>
 
         <!-- maven-surefire-plugin http://maven.apache.org/surefire/maven-surefire-plugin/ -->
-        <mavenSurefirePluginVersion>3.0.0-M1</mavenSurefirePluginVersion>
+        <mavenSurefirePluginVersion>3.0.0-M5</mavenSurefirePluginVersion>
 
         <!-- maven-source-plugin http://maven.apache.org/plugins/maven-source-plugin/ -->
-        <mavenSourcePluginVersion>3.0.1</mavenSourcePluginVersion>
+        <mavenSourcePluginVersion>3.2.1</mavenSourcePluginVersion>
 
         <!-- maven-resources-plugin http://maven.apache.org/plugins/maven-resources-plugin/ -->
-        <mavenResourcesPluginVersion>3.1.0</mavenResourcesPluginVersion>
+        <mavenResourcesPluginVersion>3.2.0</mavenResourcesPluginVersion>
 
         <!-- maven-remote-resources-plugin http://maven.apache.org/plugins/maven-remote-resources-plugin/ -->
-        <mavenRemoteResourcesPluginVersion>1.6.0</mavenRemoteResourcesPluginVersion>
+        <mavenRemoteResourcesPluginVersion>1.7.0</mavenRemoteResourcesPluginVersion>
 
         <!-- maven-deploy-plugin http://maven.apache.org/plugins/maven-deploy-plugin/ -->
         <mavenDeployPluginVersion>3.0.0-M1</mavenDeployPluginVersion>
@@ -244,22 +244,22 @@
         <mavenInstallPluginVersion>3.0.0-M1</mavenInstallPluginVersion>
 
         <!-- maven-scm-plugin http://maven.apache.org/plugins/maven-scm-plugin/ -->
-        <mavenSCMPluginVersion>1.11.1</mavenSCMPluginVersion>
+        <mavenSCMPluginVersion>1.11.2</mavenSCMPluginVersion>
 
         <!-- license-maven-plugin http://mojo.codehaus.org/license-maven-plugin/ -->
-        <licenseMavenPluginVersion>1.16</licenseMavenPluginVersion>
+        <licenseMavenPluginVersion>2.0.0</licenseMavenPluginVersion>
 
         <!-- maven-enforcer-plugin http://maven.apache.org/plugins/maven-enforcer-plugin/ -->
-        <mavenEnforcerPluginVersion>3.0.0-M1</mavenEnforcerPluginVersion>
+        <mavenEnforcerPluginVersion>3.0.0-M3</mavenEnforcerPluginVersion>
 
         <!-- maven-release-plugin http://maven.apache.org/plugins/maven-release-plugin/ -->
-        <mavenReleasePluginVersion>2.5.3</mavenReleasePluginVersion>
+        <mavenReleasePluginVersion>3.0.0-M1</mavenReleasePluginVersion>
 
         <!-- pgpverify-maven-plugin -->
-        <pgpVerifyPluginVersion>1.3.0-wren3</pgpVerifyPluginVersion>
+        <pgpVerifyPluginVersion>1.11.0</pgpVerifyPluginVersion>
         <pgpVerifyResourcesDir>${project.build.directory}/wrensec-pgp-whitelist</pgpVerifyResourcesDir>
         <pgpVerifyWhitelist>${pgpVerifyResourcesDir}/trustedkeys.properties</pgpVerifyWhitelist>
-        <pgpWhitelistArtifact>org.wrensecurity:wrensec-pgp-whitelist:1.4.3</pgpWhitelistArtifact>
+        <pgpWhitelistArtifact>org.wrensecurity:wrensec-pgp-whitelist:1.5.0</pgpWhitelistArtifact>
 
         <!-- ***************** -->
         <!-- Repository Deployment URLs -->
@@ -303,7 +303,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-antrun-plugin</artifactId>
-                    <version>1.8</version>
+                    <version>3.0.0</version>
                 </plugin>
 
                 <plugin>
@@ -315,7 +315,7 @@
                 <plugin>
                     <groupId>org.apache.felix</groupId>
                     <artifactId>maven-bundle-plugin</artifactId>
-                    <version>4.1.0</version>
+                    <version>5.1.1</version>
 
                     <configuration>
                         <instructions>
@@ -411,7 +411,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-invoker-plugin</artifactId>
-                    <version>3.1.0</version>
+                    <version>3.2.1</version>
                 </plugin>
 
                 <plugin>
@@ -473,7 +473,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-project-info-reports-plugin</artifactId>
-                    <version>3.0.0</version>
+                    <version>3.1.1</version>
                 </plugin>
 
                 <plugin>
@@ -529,13 +529,13 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-shade-plugin</artifactId>
-                    <version>3.2.1</version>
+                    <version>3.2.4</version>
                 </plugin>
 
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
-                    <version>3.7.1</version>
+                    <version>3.9.1</version>
 
                     <configuration>
                         <outputEncoding>${project.build.sourceEncoding}</outputEncoding>
@@ -578,7 +578,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>3.0.0-M1</version>
+                    <version>3.0.0-M5</version>
                 </plugin>
 
                 <plugin>
