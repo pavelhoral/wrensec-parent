@@ -28,7 +28,7 @@
 
     <groupId>org.wrensecurity</groupId>
     <artifactId>wrensec-parent</artifactId>
-    <version>3.1.0</version>
+    <version>3.1.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Wren Security Parent</name>
@@ -59,7 +59,7 @@
         <url>https://github.com/WrenSecurity/wrensec-parent</url>
         <connection>scm:git:git://github.com/WrenSecurity/wrensec-parent.git</connection>
         <developerConnection>scm:git:git@github.com:WrenSecurity/wrensec-parent.git</developerConnection>
-      <tag>3.1.0</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <distributionManagement>
