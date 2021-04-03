@@ -253,8 +253,6 @@
         <netbeans.checkstyle.format>true</netbeans.checkstyle.format>
 
         <wrenBuildToolsVersion>1.1.0</wrenBuildToolsVersion>
-        <!-- prevent the annoying ForkedBooter process from stealing window focus on Mac OS -->
-        <argLine>-Djava.awt.headless=true</argLine>
     </properties>
 
     <build>
@@ -676,11 +674,6 @@
                             <version>${wrenBuildToolsVersion}</version>
                         </dependency>
                     </dependencies>
-
-                    <configuration>
-                        <!-- prevent the annoying ForkedBooter process from stealing window focus on Mac OS -->
-                        <argLine>@{argLine} -Djava.awt.headless=true</argLine>
-                    </configuration>
                 </plugin>
 
                 <plugin>
