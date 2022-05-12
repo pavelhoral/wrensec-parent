@@ -192,6 +192,9 @@
         <!-- maven-resources-plugin http://maven.apache.org/plugins/maven-resources-plugin/ -->
         <mavenResourcesPluginVersion>3.2.0</mavenResourcesPluginVersion>
 
+        <!-- maven-remote-resources-plugin http://maven.apache.org/plugins/maven-remote-resources-plugin/ -->
+        <mavenRemoteResourcesPluginVersion>1.7.0</mavenRemoteResourcesPluginVersion>
+
         <!-- maven-deploy-plugin http://maven.apache.org/plugins/maven-deploy-plugin/ -->
         <mavenDeployPluginVersion>3.0.0-M1</mavenDeployPluginVersion>
 
@@ -572,6 +575,12 @@
                         <goals>deploy</goals>
                         <tagNameFormat>@{project.version}</tagNameFormat>
                     </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-remote-resources-plugin</artifactId>
+                    <version>${mavenRemoteResourcesPluginVersion}</version>
                 </plugin>
 
                 <plugin>
