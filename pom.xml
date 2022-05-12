@@ -192,9 +192,6 @@
         <!-- maven-resources-plugin http://maven.apache.org/plugins/maven-resources-plugin/ -->
         <mavenResourcesPluginVersion>3.2.0</mavenResourcesPluginVersion>
 
-        <!-- maven-remote-resources-plugin http://maven.apache.org/plugins/maven-remote-resources-plugin/ -->
-        <mavenRemoteResourcesPluginVersion>1.7.0</mavenRemoteResourcesPluginVersion>
-
         <!-- maven-deploy-plugin http://maven.apache.org/plugins/maven-deploy-plugin/ -->
         <mavenDeployPluginVersion>3.0.0-M1</mavenDeployPluginVersion>
 
@@ -214,11 +211,10 @@
         <mavenReleasePluginVersion>3.0.0-M1</mavenReleasePluginVersion>
 
         <!-- pgpverify-maven-plugin -->
-        <pgpVerifyPluginVersion>1.11.0</pgpVerifyPluginVersion>
+        <pgpVerifyPluginVersion>1.16.0</pgpVerifyPluginVersion>
         <pgpVerifySnapshots>false</pgpVerifySnapshots>
-        <pgpVerifyResourcesDir>${project.build.directory}/wrensec-pgp-whitelist</pgpVerifyResourcesDir>
-        <pgpVerifyWhitelist>${pgpVerifyResourcesDir}/trustedkeys.properties</pgpVerifyWhitelist>
-        <pgpWhitelistArtifact>org.wrensecurity:wrensec-pgp-whitelist:1.5.2</pgpWhitelistArtifact>
+        <pgpVerifyKeysFile>/wrensec-trusted-keys.list</pgpVerifyKeysFile>
+        <pgpVerifyKeysVersion>1.6.0</pgpVerifyKeysVersion>
 
         <!-- Repository Deployment URLs -->
         <wrenDistMgmtSnapshotsUrl>https://wrensecurity.jfrog.io/wrensecurity/snapshots</wrenDistMgmtSnapshotsUrl>
@@ -580,12 +576,6 @@
 
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-remote-resources-plugin</artifactId>
-                    <version>${mavenRemoteResourcesPluginVersion}</version>
-                </plugin>
-
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-resources-plugin</artifactId>
                     <version>${mavenResourcesPluginVersion}</version>
 
@@ -667,6 +657,13 @@
                     <groupId>org.simplify4u.plugins</groupId>
                     <artifactId>pgpverify-maven-plugin</artifactId>
                     <version>${pgpVerifyPluginVersion}</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.wrensecurity</groupId>
+                            <artifactId>wrensec-pgp-whitelist</artifactId>
+                            <version>${pgpVerifyKeysVersion}</version>
+                        </dependency>
+                    </dependencies>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -1018,34 +1015,14 @@
             <build>
                 <plugins>
                     <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-remote-resources-plugin</artifactId>
-
-                        <executions>
-                            <execution>
-                                <?m2e ignore?>
-                                <goals>
-                                    <goal>process</goal>
-                                </goals>
-
-                                <configuration>
-                                    <resourceBundles>
-                                        <resourceBundle>${pgpWhitelistArtifact}</resourceBundle>
-                                    </resourceBundles>
-
-                                    <outputDirectory>${pgpVerifyResourcesDir}</outputDirectory>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-
-                    <plugin>
                         <groupId>org.simplify4u.plugins</groupId>
                         <artifactId>pgpverify-maven-plugin</artifactId>
 
                         <configuration>
                             <failNoSignature>true</failNoSignature>
-                            <keysMapLocation>${pgpVerifyWhitelist}</keysMapLocation>
+                            <keysMapLocations>
+                                <keysMapLocation>${pgpVerifyKeysFile}</keysMapLocation>
+                            </keysMapLocations>
                             <verifySnapshots>${pgpVerifySnapshots}</verifySnapshots>
                         </configuration>
 
