@@ -1155,9 +1155,9 @@
 
                                         <pluginExecution>
                                             <pluginExecutionFilter>
-                                                <groupId>org.forgerock.commons</groupId>
+                                                <groupId>org.wrensecurity.commons</groupId>
                                                 <artifactId>i18n-maven-plugin</artifactId>
-                                                <versionRange>[1.2.0,)</versionRange>
+                                                <versionRange>[1.5.0,)</versionRange>
 
                                                 <goals>
                                                     <goal>generate-messages</goal>
