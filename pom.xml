@@ -217,9 +217,10 @@
 
         <!-- pgpverify-maven-plugin -->
         <pgpVerifyPluginVersion>1.16.0</pgpVerifyPluginVersion>
+        <pgpVerifyPlugins>true</pgpVerifyPlugins>
         <pgpVerifySnapshots>false</pgpVerifySnapshots>
-        <pgpVerifyKeysFile>/wrensec-trusted-keys.list</pgpVerifyKeysFile>
-        <pgpVerifyKeysVersion>1.6.0</pgpVerifyKeysVersion>
+        <pgpVerifyKeysFile>/wrensec-parent-keys.list</pgpVerifyKeysFile>
+        <pgpVerifyKeysVersion>${project.version}</pgpVerifyKeysVersion>
 
         <!-- Repository Deployment URLs -->
         <wrenDistMgmtSnapshotsUrl>https://wrensecurity.jfrog.io/wrensecurity/snapshots</wrenDistMgmtSnapshotsUrl>
@@ -674,13 +675,33 @@
                     <dependencies>
                         <dependency>
                             <groupId>org.wrensecurity</groupId>
-                            <artifactId>wrensec-pgp-whitelist</artifactId>
+                            <artifactId>wrensec-parent</artifactId>
                             <version>${pgpVerifyKeysVersion}</version>
+                            <classifier>resources</classifier>
                         </dependency>
                     </dependencies>
                 </plugin>
             </plugins>
         </pluginManagement>
+
+        <plugins>
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <inherited>false</inherited>
+                <configuration>
+                    <classesDirectory>${project.basedir}/src/main/resources</classesDirectory>
+                    <classifier>resources</classifier>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
     </build>
 
     <profiles>
@@ -1052,11 +1073,11 @@
                         <artifactId>pgpverify-maven-plugin</artifactId>
 
                         <configuration>
-                            <failNoSignature>true</failNoSignature>
                             <keysMapLocations>
                                 <keysMapLocation>${pgpVerifyKeysFile}</keysMapLocation>
                             </keysMapLocations>
                             <verifySnapshots>${pgpVerifySnapshots}</verifySnapshots>
+                            <verifyPluginDependencies>${pgpVerifyPlugins}</verifyPluginDependencies>
                         </configuration>
 
                         <executions>

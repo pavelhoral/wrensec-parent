@@ -1,2 +1,0 @@
-export BINTRAY_PACKAGE="wrensec-parent"
-export MVN_COMPILE_ARGS="${WREN_DEFAULT_MVN_COMPILE_ARGS:-} -Pfull-release"

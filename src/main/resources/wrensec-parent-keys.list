@@ -1,0 +1,108 @@
+#
+# The contents of this file are subject to the terms of the Common Development and
+# Distribution License (the License). You may not use this file except in compliance with the
+# License.
+#
+# You can obtain a copy of the License at legal/CDDLv1.1.txt. See the License for the
+# specific language governing permission and limitations under the License.
+# When distributing Covered Software, include this CDDL Header Notice in each file and include
+# the License file at legal/CDDLv1.1.txt. If applicable, add the following below the CDDL
+# Header, with the fields enclosed by brackets [] replaced by your own identifying
+# information: "Portions copyright [year] [name of copyright owner]".
+#
+# Copyright 2022 Wren Security
+# 
+
+# Third Party Re-Signed Artifacts
+
+aopalliance                     = 0xDB7BEA6FDB11E099783DFFA8AA781E12D7F749B5, noSig
+com.google.collections:google-collections:1.0 = 0xDB7BEA6FDB11E099783DFFA8AA781E12D7F749B5, noSig
+commons-collections:*:3.1       = 0xDB7BEA6FDB11E099783DFFA8AA781E12D7F749B5, noSig
+commons-beanutils:*:1.7.0       = 0xDB7BEA6FDB11E099783DFFA8AA781E12D7F749B5, noSig
+javax.inject                    = 0xDB7BEA6FDB11E099783DFFA8AA781E12D7F749B5, noSig
+oro                             = 0xDB7BEA6FDB11E099783DFFA8AA781E12D7F749B5, noSig
+
+
+# Other Officially Signed Artifacts
+
+ch.ethz.ganymed:ganymed-ssh2    = noSig
+com.fasterxml.*                 = 0x8A10792983023D5D14C93B488D7F1BEC1E2ECAE7
+com.google.code.findbugs        = 0x7616EB882DAF57A11477AAF559A252FB1199D873
+com.google.errorprone           = 0xE77417AC194160A3FABD04969A259C7EE636C5ED
+com.google.guava                = 0x56ED3B4843DAACC79DE555557457CA33C3CE9E15, \
+                                  0xBDB5FA4FE719D787FB3D3197F6D4A1D411E9D1AE
+com.google.j2objc               = 0xB801E2F8EF035068EC1139CC29579F18FA8FD93B
+com.vladsch.flexmark            = 0x4008F9DFF7DBC968F35F9E712642156411CCE8B3
+commons-beanutils               = 0xB6E73D84EA4FCC47166087253FAAD2CD5ECBB314
+commons-chain                   = noSig
+commons-codec                   = 0x2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB, \
+                                  0xBC87A3FD0A54480F0BADBEBD21939FF0CA2A6567
+commons-collections             = 0x0CC641C3A62453AB390066C4A41F13C999945293
+commons-digester:*:1.8          = noSig
+commons-digester                = 0xA9F885A21BA0EFB7D0991E6CCAF5EC5919FEA27D
+commons-io                      = 0x2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB, \
+                                  0xCD5464315F0B98C77E6E8ECD9DAADC1C9FCC82D0
+commons-lang                    = 0x636DE9055C4C75C7BD9830771241BC872C5E4EC0, \
+                                  0xD196A5E3E70732EEB2E5007F1861C322C56014B2
+commons-logging                 = 0x0CC641C3A62453AB390066C4A41F13C999945293
+commons-validator               = 0xD6F1BC78607808EC8E9F69437A8860944FAD5F62
+dom4j                           = noSig
+io.github.resilience4j          = 0x94FAC9D5B165E80F1F2D9A103FFA7DB1EC0FF1A2
+io.vavr                         = 0x2E732921F44FD0DB434DB5CC55A58E21609DEC6E
+javax.annotation                = 0x4F7E32D440EF90A83011A8FC6425559C47CC79C4
+javax.enterprise                = 0xF2F5A9AFBD6C3FAE324194DCB00369BF54A1AC32
+javax.servlet                   = 0x4F7E32D440EF90A83011A8FC6425559C47CC79C4
+org.apache.bcel                 = 0x2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB
+org.apache.commons              = 0x2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB, \
+                                  0xB6E73D84EA4FCC47166087253FAAD2CD5ECBB314, \
+                                  0xCE8075A251547BEE249BC151A2115AE15F6B8B72
+org.apache.httpcomponents       = 0x0785B3EFF60B1B1BEA94E0BB7C25280EAE63EBE5
+org.apache.maven                = 0x29BEA2A645F2D6CED7FB12E02B172E3E156466E8, \
+                                  0x6A814B1F869C2BBEAB7CB7271A2A1C94BDE89688, \
+                                  0x9FFED7A118D45A44E4A1E47130E6F80434A72A7F, \
+                                  0xF254B35617DC255D9344BCFA873A8E86B4372146, \
+                                  0xFB11D4BB7B244678337AAD8BC7BF26D0BB617866
+org.apache.maven.doxia          = 0x6A814B1F869C2BBEAB7CB7271A2A1C94BDE89688
+org.apache.maven.enforcer       = 0x84789D24DF77A32433CE1F079EB80E92EB2135B1
+org.apache.maven.plugins        = 0x29BEA2A645F2D6CED7FB12E02B172E3E156466E8, \
+                                  0x6A814B1F869C2BBEAB7CB7271A2A1C94BDE89688, \
+                                  0x84789D24DF77A32433CE1F079EB80E92EB2135B1, \
+                                  0xAE9E53FC28FF2AB1012273D0BF1518E0160788A2
+org.apache.maven.reporting      = 0x6A814B1F869C2BBEAB7CB7271A2A1C94BDE89688
+org.apache.maven.scm            = 0x6A814B1F869C2BBEAB7CB7271A2A1C94BDE89688
+org.apache.maven.shared         = 0x29BEA2A645F2D6CED7FB12E02B172E3E156466E8, \
+                                  0x6A814B1F869C2BBEAB7CB7271A2A1C94BDE89688, \
+                                  0x82C9EC0E52C47A936A849E0113D979595E6D01E1, \
+                                  0x84789D24DF77A32433CE1F079EB80E92EB2135B1
+org.apache.velocity             = 0x7B9751FC3F01F134F476464CD0EB627D4885CED1
+org.apache.xbean                = 0x223D3A74B068ECA354DC385CE126833F9CF64915
+org.apache-extras.beanshell     = 0xDDDEE87612E9FB95F5C8D91E411063A3A0FFD119
+org.bouncycastle                = 0x08F0AAB4D0C1A4BDDE340765B341DDB020FCB6AB
+org.checkerframework            = 0x19BEAB2D799C020F17C69126B16698A4ADF4D638
+org.codehaus.plexus:plexus-i18n = noSig
+org.codehaus.plexus:plexus-digest = noSig
+org.codehaus.plexus             = 0x190D5A957FF22273E601F7A7C92C5FEC70161C62, \
+                                  0x29BEA2A645F2D6CED7FB12E02B172E3E156466E8, \
+                                  0x32118CF76C9EC5D918E54967CA80D1F0EB6CA4BA, \
+                                  0x47063E8BA7A6450E4A52E7AE466CAED6E0747D50, \
+                                  0x6A814B1F869C2BBEAB7CB7271A2A1C94BDE89688, \
+                                  0xB02137D875D833D9B23392ECAE5A7FB608A0221C, \
+                                  0xBA926F64CA647B6D853A38672E2010F8A7FF4A41, \
+                                  0xF254B35617DC255D9344BCFA873A8E86B4372146, \
+                                  0xFA77DCFEF2EE6EB2DEBEDD2C012579464D01C06A, \
+                                  0xFB11D4BB7B244678337AAD8BC7BF26D0BB617866
+org.eclipse.aether              = 0xBA926F64CA647B6D853A38672E2010F8A7FF4A41, \
+                                  0xFB11D4BB7B244678337AAD8BC7BF26D0BB617866
+org.eclipse.jetty               = 0x5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4
+org.eclipse.sisu                = 0xCF17E92C9FFA55316B5DB83901D734EE5EE9C3F8
+org.iq80.snappy                 = 0x9E93DB1192CEE3D3B581AABB37E9D58EA4598641
+org.jsoup                       = 0xF3184BCD55F4D016E30D4C9BF42E87F9665015C9
+org.netbeans.lib:cvsclient      = noSig
+org.nibor.autolink              = 0x624B96CEB9896889C97B258F7DC3076FE22D4F88
+org.simplify4u.plugins          = 0x57EB3F12030A57BAA31CAAD5BE3E2A5CB80794EE
+org.slf4j                       = 0x475F3B8E59E6E63AA78067482C7B12F2A511E325
+org.sonatype.aether             = 0xBA926F64CA647B6D853A38672E2010F8A7FF4A41
+org.sonatype.plexus             = 0x9FFED7A118D45A44E4A1E47130E6F80434A72A7F
+org.sonatype.sisu               = 0xE78AA45938D10249E08CC1C752E6585E0102B84D
+org.tukaani                     = 0x3690C240CE51B4670D30AD1C38EE757D69184620
+org.wrensecurity.*              = 0x55D6ADA28F5796F73ED4F8410E17DF45C081F89B
