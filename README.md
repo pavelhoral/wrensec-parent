@@ -1,6 +1,6 @@
 # Wren Security Parent
 
-[![License](https://img.shields.io/badge/license-CDDL-blue.svg)](https://github.com/WrenSecurity/wrenidm/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/license-CDDL-blue.svg)](https://github.com/WrenSecurity/wrensec-parent/blob/main/legal/CDDLv1.0.txt)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/WrenSecurity)
 
 Parent POM for Wren Security projects provides default plugin definition and project build configuration.

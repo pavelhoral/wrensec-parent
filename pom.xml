@@ -20,7 +20,7 @@
 
     <groupId>org.wrensecurity</groupId>
     <artifactId>wrensec-parent</artifactId>
-    <version>3.4.1-SNAPSHOT</version>
+    <version>3.5.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Wren Security Parent</name>
@@ -68,7 +68,7 @@
         </repository>
     </distributionManagement>
 
-    <!-- (see FAQ at http://maven.apache.org/guides/mini/guide-central-repository-upload.html ) -->
+    <!-- (see FAQ at https://maven.apache.org/guides/mini/guide-central-repository-upload.html ) -->
     <repositories>
         <repository>
             <id>wrensecurity-releases</id>
@@ -126,8 +126,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <!-- maven-compiler-plugin http://maven.apache.org/plugins/maven-compiler-plugin -->
-        <mavenCompilerPluginVersion>3.8.1</mavenCompilerPluginVersion>
+        <!-- maven-compiler-plugin https://maven.apache.org/plugins/maven-compiler-plugin -->
+        <mavenCompilerPluginVersion>3.10.1</mavenCompilerPluginVersion>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
 
@@ -135,24 +135,26 @@
         <maven.min.version>3.6.0</maven.min.version>
         <jdk.min.version>${maven.compiler.source}</jdk.min.version>
 
-        <!-- findbugs-maven-plugin -->
-        <findbugsPluginVersion>3.0.5</findbugsPluginVersion>
+        <!-- spotbugs-maven-plugin -->
+        <spotbugsPluginVersion>4.7.2.1</spotbugsPluginVersion>
+        <spotbugsVersion>4.7.3</spotbugsVersion>
 
         <!-- maven-javadoc-plugin -->
-        <javadocPluginVersion>3.2.0</javadocPluginVersion>
+        <javadocPluginVersion>3.4.1</javadocPluginVersion>
         <javadocWindowTitle>${project.name} ${project.version} Documentation</javadocWindowTitle>
         <javadocDocTitle>${javadocWindowTitle}</javadocDocTitle>
+        <javadocStylesheet>org/forgerock/javadoc/javadoc.css</javadocStylesheet>
 
         <!-- maven-pmd-plugin -->
-        <pmdPluginVersion>3.14.0</pmdPluginVersion>
-        <targetJdk>${maven.compiler.target}</targetJdk>
+        <pmdPluginVersion>3.19.0</pmdPluginVersion>
+        <pmdTargetJdk>${maven.compiler.target}</pmdTargetJdk>
 
         <!--  maven-project-info-reports-plugin -->
-        <infoReportsPluginVersion>3.1.1</infoReportsPluginVersion>
+        <infoReportsPluginVersion>3.4.1</infoReportsPluginVersion>
 
         <!-- maven-checkstyle-plugin -->
-        <checkstyleVersion>8.41.1</checkstyleVersion>
-        <checkstylePluginVersion>3.1.2</checkstylePluginVersion>
+        <checkstyleVersion>10.4</checkstyleVersion>
+        <checkstylePluginVersion>3.2.0</checkstylePluginVersion>
         <checkstyleSourceConfigLocation>org/forgerock/checkstyle/check-src-default.xml</checkstyleSourceConfigLocation>
         <checkstyleDocTargetConfigLocation>org/forgerock/checkstyle/check-src-doc-target.xml</checkstyleDocTargetConfigLocation>
         <checkstyleSuppressionsLocation>org/forgerock/checkstyle/unit-test-suppressions.xml</checkstyleSuppressionsLocation>
@@ -163,55 +165,55 @@
         <clirrPluginVersion>2.8</clirrPluginVersion>
 
         <!-- jacoco-maven-plugin https://www.eclemma.org/jacoco/trunk/doc/maven.html -->
-        <jacocoPluginVersion>0.8.6</jacocoPluginVersion>
+        <jacocoPluginVersion>0.8.8</jacocoPluginVersion>
 
         <!-- maven-bundle-plugin https://felix.apache.org/components/bundle-plugin/ -->
-        <mavenBundlePluginVersion>5.1.1</mavenBundlePluginVersion>
+        <mavenBundlePluginVersion>5.1.8</mavenBundlePluginVersion>
 
         <!-- maven-dependency-plugin -->
-        <mavenDependencyPluginVersion>3.1.2</mavenDependencyPluginVersion>
+        <mavenDependencyPluginVersion>3.3.0</mavenDependencyPluginVersion>
 
-        <!-- maven-clean-plugin http://maven.apache.org/components/plugins/maven-clean-plugin -->
-        <mavenCleanPluginVersion>3.1.0</mavenCleanPluginVersion>
+        <!-- maven-clean-plugin https://maven.apache.org/components/plugins/maven-clean-plugin -->
+        <mavenCleanPluginVersion>3.2.0</mavenCleanPluginVersion>
 
-        <!-- maven-jar-plugin http://maven.apache.org/plugins/maven-jar-plugin/ -->
-        <mavenJarPluginVersion>3.2.0</mavenJarPluginVersion>
+        <!-- maven-jar-plugin https://maven.apache.org/plugins/maven-jar-plugin/ -->
+        <mavenJarPluginVersion>3.3.0</mavenJarPluginVersion>
 
-        <!-- maven-war-plugin http://maven.apache.org/plugins/maven-war-plugin/ -->
-        <mavenWarPluginVersion>3.3.1</mavenWarPluginVersion>
+        <!-- maven-war-plugin https://maven.apache.org/plugins/maven-war-plugin/ -->
+        <mavenWarPluginVersion>3.3.2</mavenWarPluginVersion>
 
-        <!-- maven-assembly-plugin http://maven.apache.org/plugins/maven-assembly-plugin/ -->
-        <mavenAssemblyPluginVersion>3.3.0</mavenAssemblyPluginVersion>
+        <!-- maven-assembly-plugin https://maven.apache.org/plugins/maven-assembly-plugin/ -->
+        <mavenAssemblyPluginVersion>3.4.2</mavenAssemblyPluginVersion>
 
-        <!-- maven-surefire-plugin http://maven.apache.org/surefire/maven-surefire-plugin/ -->
-        <mavenSurefirePluginVersion>3.0.0-M5</mavenSurefirePluginVersion>
+        <!-- maven-surefire-plugin https://maven.apache.org/surefire/maven-surefire-plugin/ -->
+        <mavenSurefirePluginVersion>3.0.0-M7</mavenSurefirePluginVersion>
 
-        <!-- maven-source-plugin http://maven.apache.org/plugins/maven-source-plugin/ -->
+        <!-- maven-source-plugin https://maven.apache.org/plugins/maven-source-plugin/ -->
         <mavenSourcePluginVersion>3.2.1</mavenSourcePluginVersion>
 
-        <!-- maven-resources-plugin http://maven.apache.org/plugins/maven-resources-plugin/ -->
-        <mavenResourcesPluginVersion>3.2.0</mavenResourcesPluginVersion>
+        <!-- maven-resources-plugin https://maven.apache.org/plugins/maven-resources-plugin/ -->
+        <mavenResourcesPluginVersion>3.3.0</mavenResourcesPluginVersion>
 
-        <!-- maven-remote-resources-plugin http://maven.apache.org/plugins/maven-remote-resources-plugin/ -->
-        <mavenRemoteResourcesPluginVersion>1.7.0</mavenRemoteResourcesPluginVersion>
+        <!-- maven-remote-resources-plugin https://maven.apache.org/plugins/maven-remote-resources-plugin/ -->
+        <mavenRemoteResourcesPluginVersion>3.0.0</mavenRemoteResourcesPluginVersion>
 
-        <!-- maven-deploy-plugin http://maven.apache.org/plugins/maven-deploy-plugin/ -->
-        <mavenDeployPluginVersion>3.0.0-M1</mavenDeployPluginVersion>
+        <!-- maven-deploy-plugin https://maven.apache.org/plugins/maven-deploy-plugin/ -->
+        <mavenDeployPluginVersion>3.0.0</mavenDeployPluginVersion>
 
-        <!-- maven-install-plugin http://maven.apache.org/plugins/maven-install-plugin/ -->
-        <mavenInstallPluginVersion>3.0.0-M1</mavenInstallPluginVersion>
+        <!-- maven-install-plugin https://maven.apache.org/plugins/maven-install-plugin/ -->
+        <mavenInstallPluginVersion>3.0.1</mavenInstallPluginVersion>
 
-        <!-- maven-scm-plugin http://maven.apache.org/plugins/maven-scm-plugin/ -->
-        <mavenSCMPluginVersion>1.11.2</mavenSCMPluginVersion>
+        <!-- maven-scm-plugin https://maven.apache.org/plugins/maven-scm-plugin/ -->
+        <mavenScmPluginVersion>1.13.0</mavenScmPluginVersion>
 
-        <!-- license-maven-plugin http://mojo.codehaus.org/license-maven-plugin/ -->
+        <!-- license-maven-plugin https://mojo.codehaus.org/license-maven-plugin/ -->
         <licenseMavenPluginVersion>2.0.0</licenseMavenPluginVersion>
 
-        <!-- maven-enforcer-plugin http://maven.apache.org/plugins/maven-enforcer-plugin/ -->
-        <mavenEnforcerPluginVersion>3.0.0-M3</mavenEnforcerPluginVersion>
+        <!-- maven-enforcer-plugin https://maven.apache.org/plugins/maven-enforcer-plugin/ -->
+        <mavenEnforcerPluginVersion>3.1.0</mavenEnforcerPluginVersion>
 
-        <!-- maven-release-plugin http://maven.apache.org/plugins/maven-release-plugin/ -->
-        <mavenReleasePluginVersion>3.0.0-M1</mavenReleasePluginVersion>
+        <!-- maven-release-plugin https://maven.apache.org/plugins/maven-release-plugin/ -->
+        <mavenReleasePluginVersion>3.0.0-M7</mavenReleasePluginVersion>
 
         <!-- pgpverify-maven-plugin -->
         <pgpVerifyPluginVersion>1.16.0</pgpVerifyPluginVersion>
@@ -236,9 +238,16 @@
             -->
             <plugins>
                 <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>findbugs-maven-plugin</artifactId>
-                    <version>${findbugsPluginVersion}</version>
+                    <groupId>com.github.spotbugs</groupId>
+                    <artifactId>spotbugs-maven-plugin</artifactId>
+                    <version>${spotbugsPluginVersion}</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>com.github.spotbugs</groupId>
+                            <artifactId>spotbugs</artifactId>
+                            <version>${spotbugsVersion}</version>
+                        </dependency>
+                    </dependencies>
                 </plugin>
 
                 <plugin>
@@ -361,7 +370,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-antrun-plugin</artifactId>
-                    <version>3.0.0</version>
+                    <version>3.1.0</version>
                 </plugin>
 
                 <plugin>
@@ -476,7 +485,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-gpg-plugin</artifactId>
-                    <version>1.6</version>
+                    <version>3.0.1</version>
                 </plugin>
 
                 <plugin>
@@ -488,7 +497,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-invoker-plugin</artifactId>
-                    <version>3.2.1</version>
+                    <version>3.3.0</version>
                 </plugin>
 
                 <plugin>
@@ -539,19 +548,16 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-plugin-plugin</artifactId>
-                    <version>3.6.0</version>
+                    <version>3.7.0</version>
                 </plugin>
 
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-pmd-plugin</artifactId>
                     <version>${pmdPluginVersion}</version>
-                </plugin>
-
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-project-info-reports-plugin</artifactId>
-                    <version>${infoReportsPluginVersion}</version>
+                    <configuration>
+                        <targetJdk>${pmdTargetJdk}</targetJdk>
+                    </configuration>
                 </plugin>
 
                 <plugin>
@@ -563,14 +569,14 @@
                         <dependency>
                             <groupId>org.apache.maven.scm</groupId>
                             <artifactId>maven-scm-provider-gitexe</artifactId>
-                            <version>1.10.0</version>
+                            <version>1.13.0</version>
                         </dependency>
                     </dependencies>
 
                     <configuration>
                         <autoVersionSubmodules>true</autoVersionSubmodules>
                         <mavenExecutorId>forked-path</mavenExecutorId>
-                        <releaseProfiles>enforce,full-release</releaseProfiles>
+                        <releaseProfiles>sign,enforce,full-release</releaseProfiles>
                         <suppressCommitBeforeTag>false</suppressCommitBeforeTag>
                         <goals>deploy</goals>
                         <tagNameFormat>@{project.version}</tagNameFormat>
@@ -596,7 +602,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-scm-plugin</artifactId>
-                    <version>${mavenSCMPluginVersion}</version>
+                    <version>${mavenScmPluginVersion}</version>
 
                     <configuration>
                         <tag>${project.artifactId}-${project.version}</tag>
@@ -606,14 +612,13 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-shade-plugin</artifactId>
-                    <version>3.2.4</version>
+                    <version>3.4.1</version>
                 </plugin>
 
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
-                    <!-- newer versions have issues with Checkstyle report rendering -->
-                    <version>3.7.1</version>
+                    <version>3.12.1</version>
 
                     <configuration>
                         <outputEncoding>${project.build.sourceEncoding}</outputEncoding>
@@ -653,7 +658,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>3.0.0-M5</version>
+                    <version>3.0.0-M7</version>
                 </plugin>
 
                 <plugin>
@@ -760,6 +765,26 @@
                                     </rules>
                                 </configuration>
                             </execution>
+
+                            <execution>
+                                <id>enforce-deprecations</id>
+
+                                <goals>
+                                    <goal>enforce</goal>
+                                </goals>
+
+                                <configuration>
+                                    <rules>
+                                        <bannedPlugins>
+                                            <level>WARN</level>
+                                            <excludes>
+                                              <exclude>org.eclipse.m2e:lifecycle-mapping</exclude>
+                                            </excludes>
+                                            <message>Please consider using processing instructions (https://www.eclipse.org/m2e/documentation/release-notes-17.html)!</message>
+                                          </bannedPlugins>
+                                    </rules>
+                                </configuration>
+                            </execution>
                         </executions>
                     </plugin>
                 </plugins>
@@ -815,18 +840,17 @@
 
             <reporting>
                 <plugins>
-                    <!-- FindBugs -->
+                    <!-- SpotBugs -->
                     <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>findbugs-maven-plugin</artifactId>
-                        <version>${findbugsPluginVersion}</version>
+                        <groupId>com.github.spotbugs</groupId>
+                        <artifactId>spotbugs-maven-plugin</artifactId>
+                        <version>${spotbugsPluginVersion}</version>
 
                         <configuration>
                             <xmlOutput>true</xmlOutput>
-                            <findbugsXmlOutput>true</findbugsXmlOutput>
-                            <findbugsXmlWithMessages>true</findbugsXmlWithMessages>
+                            <spotbugsXmlOutput>true</spotbugsXmlOutput>
                             <effort>Max</effort>
-                            <threshold>Low</threshold>
+                            <failThreshold>Low</failThreshold>
                             <failOnError>false</failOnError>
                         </configuration>
                     </plugin>
@@ -1112,144 +1136,6 @@
                     </plugin>
                 </plugins>
             </reporting>
-        </profile>
-
-        <profile>
-            <id>eclipse</id>
-            <activation>
-                <property>
-                    <name>m2e.version</name>
-                </property>
-            </activation>
-            <build>
-                <pluginManagement>
-                    <plugins>
-                        <plugin>
-                            <!--
-                                TODO Should be replaced with lifecycle processing instructions
-                                http://www.eclipse.org/m2e/documentation/release-notes-17.html
-                                (also it does not make sense to configure plugins that are not defined in this pom)
-                            -->
-                            <groupId>org.eclipse.m2e</groupId>
-                            <artifactId>lifecycle-mapping</artifactId>
-                            <version>1.0.0</version>
-
-                            <configuration>
-                                <lifecycleMappingMetadata>
-                                    <pluginExecutions>
-                                        <pluginExecution>
-                                            <pluginExecutionFilter>
-                                                <groupId>org.apache.maven.plugins</groupId>
-                                                <artifactId>maven-dependency-plugin</artifactId>
-                                                <versionRange>[2.6,)</versionRange>
-
-                                                <goals>
-                                                    <goal>unpack</goal>
-                                                </goals>
-                                            </pluginExecutionFilter>
-
-                                            <action>
-                                                <ignore />
-                                            </action>
-                                        </pluginExecution>
-
-                                        <pluginExecution>
-                                            <pluginExecutionFilter>
-                                                <groupId>org.wrensecurity.commons</groupId>
-                                                <artifactId>i18n-maven-plugin</artifactId>
-                                                <versionRange>[1.5.0,)</versionRange>
-
-                                                <goals>
-                                                    <goal>generate-messages</goal>
-                                                    <goal>generate-test-messages</goal>
-                                                </goals>
-                                            </pluginExecutionFilter>
-
-                                            <action>
-                                                <execute>
-                                                    <runOnIncremental>true</runOnIncremental>
-                                                    <runOnConfiguration>true</runOnConfiguration>
-                                                </execute>
-                                            </action>
-                                        </pluginExecution>
-
-                                        <pluginExecution>
-                                            <pluginExecutionFilter>
-                                                <groupId>org.apache.maven.plugins</groupId>
-                                                <artifactId>maven-enforcer-plugin</artifactId>
-                                                <versionRange>[1.0,)</versionRange>
-
-                                                <goals>
-                                                    <goal>enforce</goal>
-                                                </goals>
-                                            </pluginExecutionFilter>
-
-                                            <action>
-                                                <ignore />
-                                            </action>
-                                        </pluginExecution>
-
-                                        <pluginExecution>
-                                            <pluginExecutionFilter>
-                                                <groupId>org.codehaus.mojo</groupId>
-                                                <artifactId>build-helper-maven-plugin</artifactId>
-                                                <versionRange>[1.4,)</versionRange>
-
-                                                <goals>
-                                                    <goal>reserve-network-port</goal>
-                                                </goals>
-                                            </pluginExecutionFilter>
-
-                                            <action>
-                                                <ignore />
-                                            </action>
-                                        </pluginExecution>
-
-                                        <pluginExecution>
-                                          <pluginExecutionFilter>
-                                            <groupId>org.codehaus.mojo</groupId>
-                                            <artifactId>xml-maven-plugin</artifactId>
-                                            <versionRange>1.0</versionRange>
-
-                                            <goals>
-                                              <goal>transform</goal>
-                                              <goal>validate</goal>
-                                            </goals>
-                                          </pluginExecutionFilter>
-
-                                          <action>
-                                            <execute>
-                                              <runOnIncremental>true</runOnIncremental>
-                                              <runOnConfiguration>true</runOnConfiguration>
-                                            </execute>
-                                          </action>
-                                        </pluginExecution>
-
-                                        <pluginExecution>
-                                          <pluginExecutionFilter>
-                                            <groupId>org.codehaus.mojo</groupId>
-                                            <artifactId>buildnumber-maven-plugin</artifactId>
-                                            <versionRange>[0,)</versionRange>
-
-                                            <goals>
-                                              <goal>create</goal>
-                                            </goals>
-                                          </pluginExecutionFilter>
-
-                                          <action>
-                                            <execute>
-                                              <runOnConfiguration>true</runOnConfiguration>
-                                              <runOnIncremental>true</runOnIncremental>
-                                            </execute>
-                                          </action>
-                                        </pluginExecution>
-                                    </pluginExecutions>
-                                </lifecycleMappingMetadata>
-                            </configuration>
-                        </plugin>
-                    </plugins>
-                </pluginManagement>
-            </build>
         </profile>
     </profiles>
 
